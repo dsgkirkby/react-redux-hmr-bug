@@ -1,14 +1,6 @@
-# CanucksArmy-EntryTracking
+# React-Redux 5 and HMR Bug
 
-## To Run the Tests:
+This repro details a bug in React-Redux versions 5.0.0 and up.
 
-Install the required modules
-Using npm:
-```
-npm install
-```
-
-Run the Tests
-```
-npm test
-```
+With RR5, when `components/main` is edited and hot reloaded, connected components in the application stop updating.
+With RR4, the app hot reloads correctly.
