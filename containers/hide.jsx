@@ -1,18 +1,20 @@
 import {connect} from 'react-redux';
-import {AppBar} from 'material-ui';
-import {toggleAppDrawer} from '../../actions/layout';
+import HideButton from '../components/hide';
+import {toggleShown} from '../actions/layout';
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    open: state.layout.shown
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onLeftIconButtonTouchTap: () => dispatch(toggleAppDrawer())
+    onClick: () => dispatch(toggleShown())
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AppBar);
+)(HideButton);

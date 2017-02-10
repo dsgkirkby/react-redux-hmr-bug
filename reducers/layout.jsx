@@ -1,25 +1,13 @@
-import {TOGGLE_APP_DRAWER, SWITCH_VIEW} from '../actions/layout';
-import viewTypeMapping from '../constants/mappings/view-components';
-
 const initialState = {
-  appDrawerOpen: false,
-  openView: Object.keys(viewTypeMapping)[0],
-  openViewArgs: {}
+  shown: false
 };
 
 export default (state = initialState, action) => {
   switch(action.type) {
-    case TOGGLE_APP_DRAWER:
+    case 'TOGGLE_SHOWN':
       return {
         ...state,
-        appDrawerOpen: !state.appDrawerOpen
-      };
-    case SWITCH_VIEW:
-      return {
-        ...state,
-        appDrawerOpen: false,
-        openView: action.view,
-        openViewArgs: action.args
+        shown: !state.shown
       };
     default:
       return state;
