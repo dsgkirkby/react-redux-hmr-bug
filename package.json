@@ -17,7 +17,7 @@
     "pug": "^2.0.0-beta8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-redux": "^5.0.0",
+    "react-redux": "^5.0.3",
     "redux": "^3.5.2"
   },
   "devDependencies": {
