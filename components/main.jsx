@@ -6,8 +6,8 @@ import Show from '../containers/show';
 class MainApp extends React.Component {
   render() {
     return <div>
-      <Show/>
-      <Hide/>
+      <Show name="show"/>
+      <Hide name="hide"/>
     </div>
   }
 }

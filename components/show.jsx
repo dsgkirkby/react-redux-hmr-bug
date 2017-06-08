@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class extends React.Component {
+export default class Show extends React.Component {
   static propTypes = {
     onClick: React.PropTypes.func.isRequired,
   };

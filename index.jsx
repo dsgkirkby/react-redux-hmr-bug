@@ -15,7 +15,7 @@ const renderApp = () => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <MainApp/>
+        <MainApp name="main"/>
       </Provider>
     </AppContainer>,
     document.getElementById('ca-entry-tracking')
