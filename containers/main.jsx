@@ -5,4 +5,10 @@ const mapStateToProps = () => {
   return {};
 };
 
-export default connect(mapStateToProps)(Main);
+const container = connect(mapStateToProps)(Main);
+
+container.prototype.componentDidUpdate = () => {
+  console.log('CDU v1');
+};
+
+export default container;

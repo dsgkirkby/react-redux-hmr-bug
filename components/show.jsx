@@ -6,6 +6,6 @@ export default class extends React.Component {
   };
 
   render() {
-    return <button onClick={this.props.onClick}>Show</button>;
+    return <button onClick={this.props.onClick}>Show/Hide</button>;
   }
 }

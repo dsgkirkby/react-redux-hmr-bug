@@ -8,7 +8,6 @@ module.exports = {
     './index.jsx'
   ],
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   output: {
@@ -17,16 +16,16 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ["", ".webpack.js", ".web.js", ".js", ".jsx"]
+    extensions: [".webpack.js", ".web.js", ".js", ".jsx"]
   },
   devtool: 'source-map',
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?/, loader: 'babel', exclude: /node_modules/
+        test: /\.jsx?/, use: 'babel-loader', exclude: /node_modules/
       },
       {
-        test: /(\.svg|\.ttf|\.woff|\.eot|\.jpeg|\.png)/, loader: "file-loader", exclude: /node_modules/
+        test: /(\.svg|\.ttf|\.woff|\.eot|\.jpeg|\.png)/, use: "file-loader", exclude: /node_modules/
       }
     ]
   }
